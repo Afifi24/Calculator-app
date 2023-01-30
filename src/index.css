@@ -5,9 +5,10 @@
 }
 body{
   font-family: 'League Spartan', sans-serif;
-  background-color: var(--main1-background);
+  background-color: var(--bg-color);
 }
 :root{
+  --bg-color:pink;
   --transition:500ms;
   /* ! theme 1 */
   /*? #### Backgrounds */

@@ -1,7 +1,15 @@
 import React,{useState} from 'react'
 import styled from 'styled-components'
+import Color from './Color'
 const Calculator = () => {
   const [Input,setInput] = useState([])
+  const SetTheme = (color)=>{
+    document.documentElement.style.setProperty('--bg-color',color)
+  }
+  const Setcolor  = (e)=>{
+    const CurrentColor = e.target.style.getPropertyValue('--bg-color')
+    SetTheme(CurrentColor)
+  }
    const SetValue =(e)=>{
     setInput((prev)=>prev+=e.target.value)
    }
@@ -16,11 +24,25 @@ const Calculator = () => {
     setInput('')
   
    }
+   const Colors = [
+        
+       '#4834d4',
+       '#be2edc',
+       '#f9ca24',
+        
+   ]
   return (
     <Calculatorstyle>  
      <div className="container">
      <div className='header'>
+        <div className="head">
         <h4>calc</h4>
+        <div className='color-content'>
+          {Colors.map((color,idx)=>{
+            return <Color Setcolor={Setcolor} key={idx} color={color}/>
+          })}
+        </div>
+        </div>
         <input value={Input} type="text" />
         
       </div> 
@@ -81,8 +103,21 @@ margin: 4rem 0rem;
   }
   h4{
     color: #fff;
-    margin-bottom: 1rem;
     font-size: 1.2rem;
+  }
+  .head{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    .color-content{
+      padding: 0.3rem 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+      background-color: #fff;
+      border-radius: 1rem;
+    }
   }
 }
 main{
@@ -108,7 +143,8 @@ main{
    height: 2.3rem;
    border: none;
    border-radius: 0.5rem;
-   background-color: var(--orange-key-background);
+   /* background-color: var(--orange-key-background); */
+   background-color: var(--bg-color);
    font-size: 1.4rem;
    color: var(--grayish-blue);
    font-weight: 700;
@@ -158,6 +194,20 @@ background-color: var(  --blue-key-background-hover);
     &:hover{
      background-color: var(--key11-shadow-hover);
     }
+  }
+}
+/* MEDIA QUERIES */
+@media screen and (max-width:400px) {
+  .header{
+    width: 20rem;
+  input{
+    width: 20rem;
+  }
+  
+  }
+  main{
+    width: 20rem;
+
   }
 }
 `
