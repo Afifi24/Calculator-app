@@ -1,0 +1,87 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'League Spartan', sans-serif;
+  background-color: var(--main1-background);
+}
+:root{
+  --transition:500ms;
+  /* ! theme 1 */
+  /*? #### Backgrounds */
+
+--main1-background: hsl(222, 26%, 31%);
+--toggle1-background-keypad-background: hsl(223, 31%, 20%);
+--screen1-background: hsl(224, 36%, 15%);
+
+  /*? #### keys */
+  --blue-key-background: hsl(225, 21%, 49%);
+  --blue-key-background-hover: hsl(226, 40%, 74%);
+  --key1-shadow: hsl(224, 28%, 35%);
+
+--key1-background-toggle: hsl(6, 63%, 50%);
+--key11-shadow: hsl(6, 70%, 34%);
+--key11-shadow-hover: hsl(6, 85%, 68%);
+
+--orange-key-background: hsl(30, 25%, 89%);
+--orange-key-shadow: hsl(28, 16%, 65%);
+
+/*? #### Text */
+
+--grayish-blue: hsl(221, 14%, 31%);
+--White: hsl(0, 0%, 100%);
+
+/* ! theme 2 */
+
+/*? #### Backgrounds */
+
+--main2-background: hsl(0, 0%, 90%);
+--toggle2-background-keypad-background: hsl(0, 5%, 81%);
+--screen2-background: hsl(0, 0%, 93%);
+
+/*? #### Keys */
+
+--cyan-key-background: hsl(185, 42%, 37%);
+--key2-shadow: hsl(185, 58%, 25%);
+
+--key2-background-toggle: hsl(25, 98%, 40%);
+--key-shadow: hsl(25, 99%, 27%);
+
+--yellow-key-background: hsl(45, 7%, 89%);
+--orange-key-shadow: hsl(35, 11%, 61%);
+
+/* ?#### Text */
+
+--Very-grayish-yelow: hsl(60, 10%, 19%);
+--color-white: hsl(0, 0%, 100%);
+
+/*! ### Theme 3 */
+
+/*? #### Backgrounds */
+
+--main3-background: hsl(268, 75%, 9%);
+--screen3-background: hsl(268, 71%, 12%);
+
+/*? #### Keys */
+
+--violet-key-background: hsl(281, 89%, 26%);
+--key3-shadow: hsl(285, 91%, 52%);
+
+--key3-background-toggle: hsl(176, 100%, 44%);
+--key3-shadow: hsl(177, 92%, 70%);
+
+--Very-dark-violet-key-background: hsl(268, 47%, 21%);
+--magenta-key-shadow: hsl(290, 70%, 36%);
+
+/*? #### Text */
+
+--Light-yellow: hsl(52, 100%, 62%);
+--Very-dark-blue: hsl(198, 20%, 13%);
+
+
+
+}
+
+
